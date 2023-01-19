@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: $secondary-font;
+    font-weight: 500;
+    font-size: 14px;
+}
+.container {
+    max-width: 1044px;
+    margin: auto;
+}
+.columns {
+    display: flex;
+}
+.button {
+    background-color: $deep-blue;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: $pure-white;
+    font-family: $primary-font;
+    font-weight: 600;
+    transition: .2s;
+    cursor: pointer;
+    &:hover {
+        background-color: $deep-blue-hover;
+        box-shadow: 0 10px 12px $deep-blue-shadow;
+    }
+}
