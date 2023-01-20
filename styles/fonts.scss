@@ -9,6 +9,17 @@
     src: local('Poppins SemiBold'), url('../fonts/Poppins-SemiBold.woff') format('woff');    
 }
 @font-face {
+    font-family: 'Poppins';
+    font-weight: 700;
+    src: local('Poppins Bold'), url('../fonts/Poppins-Bold.woff') format('woff');    
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 400;
+    src: local('Inter'), url('../fonts/Inter-Regular.woff') format('woff');    
+}
+@font-face {
     font-family: 'Inter';
     font-weight: 500;
     src: local('Inter Medium'), url('../fonts/Inter-Medium.woff') format('woff');    

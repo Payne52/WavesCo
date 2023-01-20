@@ -1,7 +1,6 @@
-.header {
-    background-color: $dark-blue;
+.header {    
     & > .container {
-        height: 84px;
+        height: 84px;        
         align-items: center;
     }
     &__logo {

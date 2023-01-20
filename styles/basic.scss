@@ -3,6 +3,18 @@ body {
     font-family: $secondary-font;
     font-weight: 500;
     font-size: 14px;
+    line-height: 1.7;
+}
+h2 {
+    @extend %headline-3-bold;    
+    margin: 0;
+}
+h5 {
+    @extend %headline-6-semibold;
+    margin: 0;
+}
+p {
+    margin: 0;
 }
 .container {
     max-width: 1044px;
@@ -24,5 +36,8 @@ body {
     &:hover {
         background-color: $deep-blue-hover;
         box-shadow: 0 10px 12px $deep-blue-shadow;
+    }
+    &:active {
+        background-color: $deep-blue;
     }
 }

@@ -1,0 +1,15 @@
+.trusted {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    &__title {        
+        margin-bottom: 35px;
+        text-align: center;
+    }
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        justify-content: space-between;
+        align-items: center;
+    }    
+}

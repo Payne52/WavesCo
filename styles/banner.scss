@@ -1,0 +1,55 @@
+.banner {
+    background: linear-gradient(to top, $dark-blue-70, $dark-blue-70), url(../images/banner.webp);
+    background-position: center;
+    padding: 180px 0 145px;
+    margin-top: -85px;
+    color: $title-light;
+    text-align: center;
+    &__title {
+        margin-bottom: 15px;
+    }
+    &__subtitle {
+        @extend %subtitle-1-medium;
+        color: $description-light;
+        margin: 0 0 50px;
+    }
+    &__search {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto 50px;
+        &__input {
+            @extend %caption-2-medium;
+            width: 100%;
+            border: 0;
+            padding: 15px 15px 15px 55px;
+            margin-bottom: 10px;
+            background-color: $title-light;
+            background-image: url(../images/icons/search-icon.svg);
+            background-repeat: no-repeat;
+            background-position: 20px center;
+            border-radius: 8px;
+            outline: none;
+            &:focus {
+                box-shadow: 0 0 0 2px $deep-blue;
+            }
+            &::placeholder {
+                color: $description-dark;
+            }  
+        }
+        &__description {
+            @extend %caption-3-regular;
+            color: $title-light;
+            text-align: left;                        
+        }
+    }
+    &__description {
+        @extend %caption-3-medium;
+        color: $title-light;
+        &__link {
+            color: $title-light;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
