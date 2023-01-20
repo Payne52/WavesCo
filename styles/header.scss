@@ -1,20 +1,64 @@
 .header {    
+    position: relative;
+    @media (max-width:1200px) {
+        background-color: $dark-blue;
+        position: sticky;
+        top: 0;
+    }
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $pure-white;
+        opacity: .1;
+    }
     & > .container {
         height: 84px;        
         align-items: center;
+        @media (max-width:1200px) {
+            height: 70px;
+        }
     }
     &__logo {
         flex: 1;
+        &__img {
+            width: 125px;
+        }
     }
     &__menu {
+        display: flex;
+        align-items: center;
+        transition: .4s;
+        @media (max-width:1200px) {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            height: 0;
+            overflow: hidden;
+            width: 100%;
+            background-color: $dark-blue;
+            flex-direction: column;
+        }
         &__list {
             padding: 0;
             margin: 0;
             display: flex;
             list-style-type: none;
+            @media (max-width:1200px) {
+                margin-top: 25px;
+                padding-left: 60px;
+                padding-right: 60px;
+                width: calc(100% - 120px);
+                flex-direction: column;
+            }
         }
         &__list-item {
             margin-left: 35px;
+            @media (max-width:1200px) {                
+                margin-left: 0;
+                text-align: center;
+            }
         }
         &__link {
             font-family: $primary-font;
@@ -25,6 +69,10 @@
             &:hover {
                 opacity: 1;
             }
+            @media (max-width:1200px) {
+                display: block;
+                line-height: 50px;                
+            }
             &_active {
                 opacity: 1;
             }
@@ -32,5 +80,73 @@
     }
     &__button {
         margin-left: 40px;
+        @media (max-width:1200px) {
+            margin: 50px 0 0;
+        }
+    }
+    &__menu-toggle {
+        display: none;        
+        width: 50px;
+        height: 50px;
+        position: relative;
+        cursor: pointer;        
+        @media (max-width:1200px) {
+            display: block;
+        }
+        &__line { 
+            transition-delay: .1s;
+            &,
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                width: 30px;
+                height: 3px;
+                border-radius: 1.5px;
+                background-color: $title-light;
+                position: absolute;
+                top: calc(50% - 1.5px);
+                left: calc(50% - 15px);
+            }
+            &::before {
+                margin-top: -9px;
+                transition: transform .1s ease-in-out, margin .1s ease-in-out .1s;
+            }
+            &::after {
+                margin-top: 9px;
+                transition: transform .1s ease-in-out, margin .1s ease-in-out .1s;
+            }
+        }
     }
 }
+.header-checkbox {
+    display: none;
+    @media (max-width:1200px) {        
+        &:checked {
+            & ~ .section,
+            & ~ .footer {
+                display: none;
+            }
+            & ~ .header {
+                & .header__menu {
+                    height: calc(100vh - 70px);
+                    &-toggle {
+                        &__line {
+                            background-color: $invisible;                            
+                            &::before {                                
+                                margin: 0;
+                                transform: rotate(45deg);
+                                transition: margin .1s ease-in-out, transform .1s ease-in-out .1s;
+                            }
+                            &::after {                                
+                                margin: 0;
+                                transform: rotate(-45deg);
+                                transition: margin .1s ease-in-out, transform .1s ease-in-out .1s;
+                            }
+                        }                        
+                    }
+                }
+            }
+        }        
+    }
+}    

@@ -5,13 +5,30 @@
     margin-top: -85px;
     color: $title-light;
     text-align: center;
+    @media (max-width:1200px) {
+        padding-bottom: 125px;
+    }
+    @media (max-width:700px) {
+        padding: 125px 0 100px;
+    }
     &__title {
         margin-bottom: 15px;
+        @media (max-width:700px) {
+            font-size: 1.43em;
+            font-weight: 600;
+        }
     }
     &__subtitle {
         @extend %subtitle-1-medium;
         color: $description-light;
         margin: 0 0 50px;
+        @media (max-width:1200px) {
+            font-size: 1.28em;
+        }
+        @media (max-width:700px) {
+            font-size: 1.14em;
+            font-weight: 600;
+        }
     }
     &__search {
         width: 100%;
@@ -19,7 +36,7 @@
         margin: 0 auto 50px;
         &__input {
             @extend %caption-2-medium;
-            width: 100%;
+            width: calc(100% - 70px);
             border: 0;
             padding: 15px 15px 15px 55px;
             margin-bottom: 10px;
@@ -31,6 +48,11 @@
             outline: none;
             &:focus {
                 box-shadow: 0 0 0 2px $deep-blue;
+            }
+            @media (max-width:700px) {
+                padding-left: 50px;
+                background-position: 15px center;
+                margin-bottom: 15px;
             }
             &::placeholder {
                 color: $description-dark;

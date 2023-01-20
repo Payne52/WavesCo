@@ -13,9 +13,24 @@
     font-weight: 500;
     font-size: 1.43em;
 }
+%subtitle-2-medium {
+    font-family: $secondary-font;
+    font-weight: 500;
+    font-size: 1.28em;
+}
+%subtitle-2-semibold {
+    font-family: $secondary-font;
+    font-weight: 600;
+    font-size: 1.28em;
+}
 %caption-2-medium {
     font-family: $secondary-font;
     font-weight: 500;
+    font-size: 1.14em;
+}
+%caption-2-regular {
+    font-family: $secondary-font;
+    font-weight: 400;
     font-size: 1.14em;
 }
 %caption-3-regular {

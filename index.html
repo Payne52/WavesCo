@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/style.scss">
 </head>
 <body>
+    <input type="checkbox" id="header-checkbox" class="header-checkbox">
     <header class="header">
         <div class="container columns">
             <div class="header__logo">
@@ -16,6 +17,9 @@
                     <img src="./images/logo.svg" alt="WavesCo" class="header__logo__img">
                 </a>
             </div>
+            <label for="header-checkbox" class="header__menu-toggle">
+                <span class="header__menu-toggle__line"></span>
+            </label>
             <nav class="header__menu">
                 <ul class="header__menu__list">
                     <li class="header__menu__list-item">
@@ -34,8 +38,8 @@
                         <a href="#" class="header__menu__link">FAQ</a>
                     </li>
                 </ul>
-            </nav>
-            <button class="button header__button">Login</button>
+                <button class="button header__button">Login</button>
+            </nav>            
         </div>
     </header>
     <section class="section banner">
@@ -61,49 +65,93 @@
             <h5 class="trusted__title">Trusted by top Youtuber and Production House</h5>
             <ul class="trusted__list columns">
                 <li class="trused__list-item">
-                    <picture class="trused__list-item__image">
+                    <picture class="trusted__list-item__picture">
                         <source type="image/webp" srcset="./images/trusted/dudeperfect.png?as=webp&width=50, ./images/trusted/dudeperfect.png?as=webp&width=100 2x">
-                        <img src="./images/trusted/dudeperfect.png?width=50" srcset="./images/trusted/dudeperfect.png?width=100 2x" alt="Dudeperfect">
+                        <img src="./images/trusted/dudeperfect.png?width=50" srcset="./images/trusted/dudeperfect.png?width=100 2x" alt="Dudeperfect" class="trusted__list-item__img">
                     </picture>
                 </li>
                 <li class="trused__list-item">
-                    <picture class="trused__list-item__image">
+                    <picture class="trusted__list-item__picture">
                         <source type="image/webp" srcset="./images/trusted/pewdiepie.png?as=webp&width=50, ./images/trusted/pewdiepie.png?as=webp&width=100 2x">
-                        <img src="./images/trusted/pewdiepie.png?width=50" srcset="./images/trusted/pewdiepie.png?width=100 2x" alt="Pewdiepie">
+                        <img src="./images/trusted/pewdiepie.png?width=50" srcset="./images/trusted/pewdiepie.png?width=100 2x" alt="Pewdiepie" class="trusted__list-item__img">
                     </picture>
                 </li>
                 <li class="trused__list-item">
-                    <picture class="trused__list-item__image">
+                    <picture class="trusted__list-item__picture">
                         <source type="image/webp" srcset="./images/trusted/mrbeast.png?as=webp&width=77, ./images/trusted/mrbeast.png?as=webp&width=154 2x">
-                        <img src="./images/trusted/mrbeast.png?width=77" srcset="./images/trusted/mrbeast.png?width=154 2x" alt="MrBeast">
+                        <img src="./images/trusted/mrbeast.png?width=77" srcset="./images/trusted/mrbeast.png?width=154 2x" alt="MrBeast" class="trusted__list-item__img">
                     </picture>
                 </li>
                 <li class="trused__list-item">
-                    <picture class="trused__list-item__image">
+                    <picture class="trusted__list-item__picture">
                         <source type="image/webp" srcset="./images/trusted/wb.png?as=webp&width=50, ./images/trusted/wb.png?as=webp&width=100 2x">
-                        <img src="./images/trusted/wb.png?width=50" srcset="./images/trusted/wb.png?width=100 2x" alt="WB">
+                        <img src="./images/trusted/wb.png?width=50" srcset="./images/trusted/wb.png?width=100 2x" alt="WB" class="trusted__list-item__img">
                     </picture>
                 </li> 
                 <li class="trused__list-item">
-                    <picture class="trused__list-item__image">
+                    <picture class="trusted__list-item__picture">
                         <source type="image/webp" srcset="./images/trusted/netflix.png?as=webp&width=94, ./images/trusted/netflix.png?as=webp&width=188 2x">
-                        <img src="./images/trusted/netflix.png?width=94" srcset="./images/trusted/netflix.png?width=188 2x" alt="Netflix">
+                        <img src="./images/trusted/netflix.png?width=94" srcset="./images/trusted/netflix.png?width=188 2x" alt="Netflix" class="trusted__list-item__img">
                     </picture>
                 </li>
                 <li class="trused__list-item">
-                    <picture class="trused__list-item__image">
+                    <picture class="trusted__list-item__picture">
                         <source type="image/webp" srcset="./images/trusted/pixar.png?as=webp&width=130, ./images/trusted/pixar.png?as=webp&width=260 2x">
-                        <img src="./images/trusted/pixar.png?width=130" srcset="./images/trusted/pixar.png?width=260 2x" alt="Pixar">
+                        <img src="./images/trusted/pixar.png?width=130" srcset="./images/trusted/pixar.png?width=260 2x" alt="Pixar" class="trusted__list-item__img">
                     </picture>
                 </li>
                 <li class="trused__list-item">
-                    <picture class="trused__list-item__image">
+                    <picture class="trusted__list-item__picture">
                         <source type="image/webp" srcset="./images/trusted/pickypicks.png?as=webp&width=50, ./images/trusted/pickypicks.png?as=webp&width=100 2x">
-                        <img src="./images/trusted/pickypicks.png?width=50" srcset="./images/trusted/pickypicks.png?width=100 2x" alt="Picky Picks">
+                        <img src="./images/trusted/pickypicks.png?width=50" srcset="./images/trusted/pickypicks.png?width=100 2x" alt="Picky Picks" class="trusted__list-item__img">
                     </picture>
                 </li>                               
             </ul>
         </div>
     </section>
+    <footer class="footer">
+        <div class="container columns">
+            <div class="footer__block-inf">
+                <div class="footer__block-inf__logo">
+                    <a href="#" class="footer__block-inf__logo__link">
+                        <img src="./images/logo.svg" alt="WavesCo" class="footer__block-inf__logo__img">
+                    </a>
+                </div>
+                <p class="footer__block-inf__description">
+                    WavesCo is a platform for providing premium sound effects for Youtube videos, movies and many more.
+                </p>
+                <p class="footer__block-inf__copyright">
+                    WavesCo ©2021, All rights reserved
+                </p>                
+            </div>
+            <div class="footer__block">
+                <h6 class="footer__block__title">Product</h6>
+                <ul class="footer__block__list">
+                    <li class="footer__block__list-item"><a href="#" class="footer__block__link">Browse sounds</a></li>
+                    <li class="footer__block__list-item"><a href="#" class="footer__block__link">Pricing</a></li>
+                    <li class="footer__block__list-item"><a href="#" class="footer__block__link">FAQ</a></li>
+                    <li class="footer__block__list-item"><a href="#" class="footer__block__link">Affiliate</a></li>                    
+                </ul>
+            </div>
+            <div class="footer__block">
+                <h6 class="footer__block__title">Company</h6>
+                <ul class="footer__block__list">
+                    <li class="footer__block__list-item"><a href="#" class="footer__block__link">Blog</a></li>
+                    <li class="footer__block__list-item"><a href="#" class="footer__block__link">About us</a></li>
+                    <li class="footer__block__list-item"><a href="#" class="footer__block__link">Help</a></li>
+                    <li class="footer__block__list-item"><a href="#" class="footer__block__link">Career</a></li>                    
+                </ul>
+            </div>
+            <div class="footer__block">
+                <h6 class="footer__block__title">Social Media</h6>
+                <ul class="footer__block__list">
+                    <li class="footer__block__list-item"><a href="#" class="footer__block__link">Twitter</a></li>
+                    <li class="footer__block__list-item"><a href="#" class="footer__block__link">Instagram</a></li>
+                    <li class="footer__block__list-item"><a href="#" class="footer__block__link">YouTube</a></li>
+                    <li class="footer__block__list-item"><a href="#" class="footer__block__link">Facebook</a></li>                    
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
