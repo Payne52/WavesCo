@@ -12,6 +12,7 @@
     }
     &__title {
         text-align: center;
+        color: $title-dark;
         margin-bottom: 50px;
         @media (max-width: 700px) {
             font-size: 1.42em;
@@ -54,6 +55,9 @@
                 display: block;
                 margin: 0 auto 10px;
             }
+        }
+        &__name {
+            color: $title-dark;
         }
         &__picture {
             display: block;
