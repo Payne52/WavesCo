@@ -1,0 +1,121 @@
+.customers {
+    padding: 60px 0 140px;
+    @media (max-width:1200px) {
+        padding-bottom: 90px;
+    }
+    @media (max-width:700px) {
+        padding: 50px 0 70px;
+    }
+    &__subtitle {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: 50px;
+        @media (max-width:700px) {
+            font-size: 1.42em;
+            margin-bottom: 40px;
+        }
+    }
+    &__cards {
+        column-gap: 30px;
+        flex-wrap: wrap;
+        & input[type="radio"] {
+            display: none;
+        }
+    }
+    &__card {       
+        flex: 1;      
+        @media (max-width:1200px) {
+            flex: initial;
+            width: calc(50% - 15px);            
+            display: none;
+        }
+        @media (max-width:700px) {
+            flex: 1;
+        }
+        &__block {
+            height: calc(100% - 50px);            
+            padding: 20px 20px 30px;        
+            text-align: center;
+            border: 1px solid $title-light;
+            border-radius: 8px;
+            @media (max-width:700px) {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+        &__message {
+            @extend %caption-3-medium;
+            margin-bottom: 25px;
+            &::before {
+                content: url('../images/icons/double-quotes.svg');
+                display: block;
+                margin: 0 auto 10px;
+            }
+        }
+        &__picture {
+            display: block;
+            margin-bottom: 5px;
+        }
+        &__post {
+            @extend %caption-3-medium;
+            color: $description-light;
+        }
+    }
+    &__dots {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        display: none;
+        margin-top: 30px;
+        &_tablet {
+            @media (max-width:1200px) and (min-width:700px) {
+                display: flex;
+            }            
+        }   
+        &_mobile {
+            @media (max-width:700px) {
+                display: flex;
+            }
+        }
+    }
+    &__dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $title-light;
+    }
+}
+
+@media (max-width:1200px) and (min-width:700px) {
+    #customer-tablet-1:checked {
+        & ~ #c-card-1,
+        & ~ #c-card-2{
+            display: block;
+        }
+    }
+    #customer-tablet-2:checked {
+        & ~ #c-card-3{
+            display: block;
+        }
+    }
+}
+@media (max-width:700px) {
+    #customer-mobile-1:checked ~ #c-card-1,
+    #customer-mobile-2:checked ~ #c-card-2,
+    #customer-mobile-3:checked ~ #c-card-3 {
+        display: block;        
+    }
+}
+
+#customer-tablet-1:checked ~ .customers__dots .customers__dot[for="customer-tablet-1"],
+#customer-tablet-2:checked ~ .customers__dots .customers__dot[for="customer-tablet-2"] {
+    background-color: $description-light;
+}
+#customer-mobile-1:checked ~ .customers__dots .customers__dot[for="customer-mobile-1"],
+#customer-mobile-2:checked ~ .customers__dots .customers__dot[for="customer-mobile-2"],
+#customer-mobile-3:checked ~ .customers__dots .customers__dot[for="customer-mobile-3"] {
+    background-color: $description-light;
+}

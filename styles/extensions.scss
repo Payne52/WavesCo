@@ -3,11 +3,17 @@
     font-weight: 700;
     font-size: 2.57em;
 }
+%headline-5-semibold {
+    font-family: $primary-font;
+    font-weight: 600;
+    font-size: 1.71em;
+}
 %headline-6-semibold {
     font-family: $primary-font;
     font-weight: 600;
     font-size: 1.43em;
 }
+
 %subtitle-1-medium {
     font-family: $secondary-font;
     font-weight: 500;
@@ -23,6 +29,7 @@
     font-weight: 600;
     font-size: 1.28em;
 }
+
 %caption-2-medium {
     font-family: $secondary-font;
     font-weight: 500;
@@ -42,4 +49,12 @@
     font-family: $secondary-font;
     font-weight: 500;
     font-size: 1em;
+}
+
+%capaitalised {
+    font-family: $primary-font;
+    font-weight: 600;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: $brave-yellow;
 }
