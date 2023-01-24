@@ -1,25 +1,25 @@
 .footer {
     background-color: $dark-blue;
     padding: 50px 0;
-    @media (max-width:1200px) {
+    @media (max-width: 1200px) {
         padding: 40px 0;
     }
-    @media (max-width:700px) {
+    @media (max-width: 700px) {
         padding: 50px 0;
     }  
     & > .container {
         justify-content: space-between;
         flex-wrap: wrap;
-        @media (max-width:1200px) {
+        @media (max-width: 1200px) {
             row-gap: 40px;
         }
-        @media (max-width:700px) {
+        @media (max-width: 700px) {
             row-gap: 35px;
         }  
     }
     &__block-inf {
         max-width: 30%;
-        @media (max-width:1200px) {
+        @media (max-width: 1200px) {
             max-width: none;
             width: 100%;                
         }
@@ -27,7 +27,7 @@
             margin-bottom: 25px;
             &__img {
                 width: 170px;
-                @media (max-width:1200px) {
+                @media (max-width: 1200px) {
                     width: 140px;
                 }
             }
@@ -36,34 +36,34 @@
             @extend %caption-2-regular;
             color: $description-light;
             margin-bottom: 30px;
-            @media (max-width:1200px) {
+            @media (max-width: 1200px) {
                 max-width: calc(5 / 12 * 100%);
                 font-size: 1em;
                 margin-bottom: 20px;
             }
-            @media (max-width:700px) {
+            @media (max-width: 700px) {
                 margin-bottom: 15px;
             }
         }
         &__copyright {
             @extend %caption-3-medium;
             color: $description-light;
-            @media (max-width:1200px) {
+            @media (max-width: 1200px) {
                 font-weight: 400;                
             }            
         }
     }    
     &__block {
-        @media (max-width:1200px){
+        @media (max-width: 1200px){
             padding-right: 25px;
         }
-        @media (max-width:700px) {
+        @media (max-width: 700px) {
             width: calc(50% - 25px);
         }
         &__title {            
             color: $title-light;
             margin-bottom: 12px;
-            @media (max-width:1200px) {
+            @media (max-width: 1200px) {
                 font-size: 1.14em;
             }
         }
@@ -85,7 +85,7 @@
             &:hover {
                 text-decoration: underline;
             }
-            @media (max-width:1200px) {
+            @media (max-width: 1200px) {
                 font-size: 1em;
             }
         }

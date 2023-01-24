@@ -1,15 +1,15 @@
 .trusted {
     padding: 50px 0 60px;    
-    @media (max-width:1200px) {
+    @media (max-width: 1200px) {
         padding: 40px 0 40px;        
     }
-    @media (max-width:700px) {
+    @media (max-width: 700px) {
         padding-top: 30px;
     }
     &__title {        
         margin-bottom: 35px;
         text-align: center;
-        @media (max-width:700px) {
+        @media (max-width: 700px) {
             font-size: 1.28em;
         }
     }
@@ -20,14 +20,14 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        @media (max-width:700px) {
+        @media (max-width: 700px) {
             column-gap: 7%;
             row-gap: 40px;            
         }
     }
     &__list-item {
         &__img {            
-            @media (max-width:1200px) {
+            @media (max-width: 1200px) {
                 max-height: 40px;
                 max-width: 90px;
             }            
