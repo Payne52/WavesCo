@@ -300,6 +300,7 @@ body * {
   width: 36px;
   height: 36px;
   border-radius: 4px;
+  font-size: 0;
   text-decoration: none;
   transition: all .1s;
 }

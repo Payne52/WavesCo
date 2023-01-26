@@ -130,6 +130,7 @@ h6 {
     }
     &__download {
         @extend %align-center;
+        font-size: 0;
         width: 36px;
         height: 36px;
         border-radius: 4px;
