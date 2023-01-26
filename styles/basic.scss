@@ -29,6 +29,13 @@ h6 {
 .capaitalised {
     @extend %capaitalised;
 }
+.see-all {
+    @extend %label-2-semibold;
+    color: $deep-blue;
+    &:hover {
+        text-decoration: none;
+    }
+}
 .container {
     max-width: 1044px;
     margin: auto;
@@ -137,6 +144,7 @@ h6 {
     }
     &__more {
         @extend %align-center;
+        font-size: 0;
         border: 0;
         margin: 0;
         padding: 0;

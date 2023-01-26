@@ -124,7 +124,7 @@ h6 {
   font-weight: 600;
 }
 
-.sound-effects__see-all {
+.see-all {
   font-family: Poppins, sans-serif;
   font-size: 1em;
   font-weight: 600;
@@ -138,7 +138,7 @@ h6 {
   font-weight: 600;
 }
 
-.sound-effect-navigation__more, .sound-effect-navigation__download, .sound-effect-navigation__like {
+.categories__category__cover, .sound-effect-navigation__more, .sound-effect-navigation__download, .sound-effect-navigation__like {
   justify-content: center;
   align-items: center;
   display: flex;
@@ -158,6 +158,14 @@ body {
 
 body * {
   margin: 0;
+}
+
+.see-all {
+  color: #0432df;
+}
+
+.see-all:hover {
+  text-decoration: none;
 }
 
 .container {
@@ -308,6 +316,7 @@ body * {
   border-radius: 4px;
   margin: 0;
   padding: 0;
+  font-size: 0;
   transition: all .1s;
 }
 
@@ -356,6 +365,7 @@ body * {
 }
 
 .header {
+  z-index: 1;
   position: relative;
 }
 
@@ -894,8 +904,13 @@ body * {
   border-bottom: 1px solid #eee;
   align-items: center;
   column-gap: 45px;
-  padding: 10px 0 10px 20px;
+  padding: 10px 10px 10px 20px;
+  transition: all .1s;
   display: flex;
+}
+
+.sound-effects__playlist__item:hover {
+  background-color: #fafafa;
 }
 
 @media (max-width: 1200px) {
@@ -958,14 +973,6 @@ body * {
   }
 }
 
-.sound-effects__see-all {
-  color: #0432df;
-}
-
-.sound-effects__see-all:hover {
-  text-decoration: none;
-}
-
 #all:checked ~ .sound-effects__navigation [for="all"]:after, #jumpscare:checked ~ .sound-effects__navigation [for="jumpscare"]:after, #mellow:checked ~ .sound-effects__navigation [for="mellow"]:after, #happiness:checked ~ .sound-effects__navigation [for="happiness"]:after, #ambience:checked ~ .sound-effects__navigation [for="ambience"]:after, #zonk:checked ~ .sound-effects__navigation [for="zonk"]:after {
   content: "";
   width: 100%;
@@ -980,6 +987,123 @@ body * {
   #all:checked ~ .sound-effects__navigation [for="all"]:after, #jumpscare:checked ~ .sound-effects__navigation [for="jumpscare"]:after, #mellow:checked ~ .sound-effects__navigation [for="mellow"]:after, #happiness:checked ~ .sound-effects__navigation [for="happiness"]:after, #ambience:checked ~ .sound-effects__navigation [for="ambience"]:after, #zonk:checked ~ .sound-effects__navigation [for="zonk"]:after {
     bottom: 4px;
   }
+}
+
+.categories {
+  padding: 60px 0;
+}
+
+@media (max-width: 1200px) {
+  .categories {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .categories {
+    padding: 30px 0 40px;
+  }
+}
+
+.categories__title {
+  margin-bottom: 25px;
+}
+
+@media (max-width: 1200px) {
+  .categories__title {
+    margin-bottom: 20px;
+    font-size: 1.71em;
+  }
+}
+
+@media (max-width: 700px) {
+  .categories__title {
+    font-size: 1.43em;
+  }
+}
+
+.categories__grid {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px 20px;
+  margin-bottom: 20px;
+  display: grid;
+}
+
+@media (max-width: 1200px) {
+  .categories__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  .categories__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+.categories__category {
+  border-radius: 8px;
+  align-items: center;
+  line-height: normal;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.categories__category:hover .categories__category__title {
+  transform: translateY(-10px);
+}
+
+@media (max-width: 1200px) {
+  .categories__category {
+    height: 90px;
+  }
+}
+
+@media (max-width: 700px) {
+  .categories__category {
+    height: 70px;
+  }
+}
+
+.categories__category__cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.categories__category__title {
+  color: #eee;
+  text-align: center;
+  padding: 0 15px;
+  transition: all .2s ease-out;
+}
+
+@media (max-width: 700px) {
+  .categories__category__title {
+    font-size: 1.14em;
+  }
+}
+
+.categories__category__picture {
+  height: 100%;
+  flex: 1;
+}
+
+@media (max-width: 1200px) {
+  .categories__category__picture {
+    height: auto;
+  }
+}
+
+.categories__category__img {
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .benefits {
