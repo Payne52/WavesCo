@@ -2,30 +2,35 @@
   font-family: Poppins;
   font-weight: 500;
   src: local(Poppins Medium), url("Poppins-Medium.bdbd7e6e.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Poppins;
   font-weight: 600;
   src: local(Poppins SemiBold), url("Poppins-SemiBold.a6f50bc1.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Poppins;
   font-weight: 700;
   src: local(Poppins Bold), url("Poppins-Bold.225760c0.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Inter;
   font-weight: 400;
   src: local(Inter), url("Inter-Regular.29a7dccd.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Inter;
   font-weight: 500;
   src: local(Inter Medium), url("Inter-Medium.2f571a4a.woff") format("woff");
+  font-display: swap;
 }
 
 h2 {
