@@ -1,3 +1,6 @@
+html {
+    min-width: 320px;
+}
 body {
     margin: 0;
     font-family: $secondary-font;
@@ -70,5 +73,118 @@ h6 {
         @media (max-width: 1200px) {
             padding: 8px 18px;
         }
+    }
+}
+.play-button {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    background-color: $deep-blue-saturation;
+    border: 0;
+    cursor: pointer;
+    transition: .2s ease-out;
+    &:hover {
+        box-shadow: 0 0 0 5px $deep-blue-saturation-50;
+    }
+    &:active {
+        box-shadow: 0 0 0 2px $deep-blue-saturation-50;
+    }
+    &__img {
+        display: block;
+        margin-left: 12px;
+    }
+}
+.sound-effect-navigation {
+    display: flex;
+    column-gap: 20px;
+    @media (max-width: 700px) {
+        column-gap: 10px;
+    }
+    &__like {
+        @extend %align-center;
+        width: 36px;
+        height: 36px;    
+        border-radius: 4px;    
+        cursor: pointer;
+        transition: .1s;
+        &:hover {
+            background-color: $light-2;
+        }
+        &:active {
+            background-color: $light-3;
+        } 
+        @media (max-width: 700px) {
+            display: none;
+        }    
+    }
+    &__download {
+        @extend %align-center;
+        width: 36px;
+        height: 36px;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: .1s;
+        &:hover {
+            background-color: $light-2;
+        }
+        &:active {
+            background-color: $light-3;
+        } 
+    }
+    &__more {
+        @extend %align-center;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        background: none;
+        width: 36px;
+        height: 36px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: .1s;
+        &:hover {
+            background-color: $light-2;
+        }
+        &:active {
+            background-color: $light-3;
+        } 
+        &__dot {  
+            margin: auto;
+            position: relative;          
+            &,
+            &::after,
+            &::before {
+                display: block;                
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: $description-dark;
+            }
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;  
+                top: 0;
+                
+            }
+            &::before {
+                left: -7px;
+            }
+            &::after {
+                right: -7px;
+            }
+        }
+    }
+}
+[name="sound-effects"] {
+    display: none; 
+    &:checked + .sound-effect-navigation__like path {
+        stroke: $deep-blue;
+        fill: $deep-blue-saturation;
+        /*fill: $deep-blue;*/
     }
 }

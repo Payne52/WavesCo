@@ -40,6 +40,11 @@
     font-weight: 600;
     font-size: 1.28em;
 }
+%subtitle-3-medium {
+    font-family: $secondary-font;
+    font-weight: 500;
+    font-size: 1.14em;
+}
 /* Caption */
 %caption-1-medium {
     font-family: $secondary-font;
@@ -66,6 +71,11 @@
     font-weight: 500;
     font-size: 1em;
 }
+%caption-4-regular {
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 0.86em;
+}
 /*Label*/
 %label-1-semibold {
     font-family: $primary-font;
@@ -84,4 +94,10 @@
     font-size: 1em;
     text-transform: uppercase;
     color: $brave-yellow;
+}
+/*Align*/
+%align-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

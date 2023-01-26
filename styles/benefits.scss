@@ -9,7 +9,7 @@
     &__grid {
         display: grid;
         grid-template-columns: 4fr 3fr 3fr;
-        column-gap: 100px;  
+        column-gap: 95px;  
         row-gap: 50px;
         @media (max-width: 1200px) {
             grid-template-columns: 1fr 1fr;                      
