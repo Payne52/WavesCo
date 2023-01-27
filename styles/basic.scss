@@ -11,22 +11,6 @@ body {
 body * {
     margin: 0;
 }
-h1,
-h2 {
-    @extend %headline-3-bold;        
-}
-h3 {
-    @extend %headline-4-semibold;
-}
-h4 {
-    @extend %headline-5-semibold;
-}
-h5 {
-    @extend %headline-6-semibold;    
-}
-h6 {
-    @extend %subtitle-2-semibold;
-}
 .capaitalised {
     @extend %capaitalised;
 }

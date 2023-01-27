@@ -19,6 +19,23 @@
             row-gap: 30px;               
         }
     }
+    &__subtitle {
+        margin-bottom: 15px;
+    }
+    &__title {
+        @extend %headline-4-semibold;
+        color: $title-dark;
+        @media (max-width: 1200px) {
+            width: calc(9 / 12 * 100%);
+            margin: auto;
+            font-size: 1.71em;
+        }
+        @media (max-width: 700px) {
+            font-size: 1.43em;
+            width: auto;
+            margin-bottom: 20px;
+        }
+    }
     &__cell {        
         &_title-block {
             grid-column: 1 / 2;
@@ -33,6 +50,7 @@
             }
         }
         &__title {
+            @extend %subtitle-2-semibold;
             color: $title-dark;
             @media (max-width: 700px) {
                 font-size: 1.14em;
@@ -45,22 +63,6 @@
         &__description {
             @extend %caption-3-medium;
             color: $description-dark;
-        }
-    }
-    &__subtitle {
-        margin-bottom: 15px;
-    }
-    &__title {
-        color: $title-dark;
-        @media (max-width: 1200px) {
-            width: calc(9 / 12 * 100%);
-            margin: auto;
-            font-size: 1.71em;
-        }
-        @media (max-width: 700px) {
-            font-size: 1.43em;
-            width: auto;
-            margin-bottom: 20px;
         }
     }
 }

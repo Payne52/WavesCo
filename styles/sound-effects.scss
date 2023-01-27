@@ -7,6 +7,7 @@
         display: none;
     }
     &__title {
+        @extend %headline-4-semibold;
         margin-bottom: 15px;
         @media (max-width: 1200px) {
             font-size: 1.71em;

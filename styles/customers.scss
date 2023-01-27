@@ -11,6 +11,7 @@
         margin-bottom: 20px;
     }
     &__title {
+        @extend %headline-5-semibold;
         text-align: center;
         color: $title-dark;
         margin-bottom: 50px;
@@ -57,6 +58,7 @@
             }
         }
         &__name {
+            @extend %subtitle-2-semibold;
             color: $title-dark;
         }
         &__picture {
