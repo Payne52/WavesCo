@@ -11,6 +11,7 @@ body {
 body * {
     margin: 0;
 }
+h1,
 h2 {
     @extend %headline-3-bold;        
 }
